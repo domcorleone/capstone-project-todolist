@@ -1,0 +1,87 @@
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&family=Roboto+Slab:wght@200&display=swap');
+
+body {
+    font-family: 'Roboto Slab', serif;
+    background-image: linear-gradient(90deg, rgb(128, 98, 214), rgb(50, 38, 83));
+    height: 100vh;
+    
+}
+
+h1, footer {
+    color: whitesmoke;
+}
+
+footer {
+    background-color: rgba(0, 0, 0, 0.1);  
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    text-align: center;   
+    font-weight: 600;  
+}
+
+.list-group {
+    margin-top: 7.6rem;
+}
+
+.bg-dark {
+    --bs-bg-opacity: 1;
+    /*background-color: rgba(var(--bs-dark-rgb),var(--bs-bg-opacity))!important;*/
+    background-color: rgba(0, 0, 0, 0.1)!important;  
+}
+
+button[type="submit"] {
+    border-radius: 50%;
+    background-color: rgb(128, 98, 214);
+    border: none;
+    width: 45px;
+    height: 45px;
+    color: white;
+    font-weight: 900;
+}
+
+input[type="text"] {
+    text-align: center;
+    font-size: 1rem;
+    height: 2.5rem;
+    border-top: none;
+    border-right: none;
+    border-left: none;
+    border-bottom: 0.1rem solid grey;
+    width: 14rem;
+}
+
+/* remove border when textbox receive mouse focus */
+
+input[type="text"]:focus {
+    outline: none;
+}
+
+.task-title {
+    background-color:rgba(0, 0, 0, 0.1);    
+    font-size: 1.5rem;
+}
+
+.task-title > p {
+    color: whitesmoke;
+    text-align: center;
+    font-weight: 900;
+    font-size: 1.5rem;
+    padding-top: 10px;
+}
+
+/* solution: https://stackoverflow.com/questions/30975459/add-strikethrough-to-checked-checkbox
+   input[type=checkbox]:checked + label (will work as well)
+*/
+input[type=checkbox]:checked + label.strikethrough{ 
+    text-decoration: line-through;
+}
+
+.navbar-brand, .nav-link {
+    font-size: 1.5rem;
+}
+
+.navbar {
+    --bs-navbar-nav-link-padding-x: 1.5rem;
+}
