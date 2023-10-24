@@ -1,0 +1,36 @@
+<%- include("partials/header.ejs") %>
+    <!-- begin: bootstrap code for the list -->
+    <div class="d-flex flex-column flex-md-row p-4 gap-4 py-md-5 align-items-center justify-content-center">
+     
+      <div class="list-group">
+        <div class="task-title">
+          <% if (locals.message) { %>
+            <p><%= locals.message %></p>
+          <% } %>
+         
+        </div>
+         
+        <% if (locals.todoList) { %>
+              <% if (todoList.length > 0) { %> <!-- the list contains at list one item -->
+                <% todoList.forEach(element => { %>
+                  <label class="list-group-item d-flex gap-2">
+                    <input class="form-check-input flex-shrink-0" type="checkbox" value="">
+                  <label class="strikethrough">
+                    <%=element  %>                  
+                  </label>
+                </label>
+                <% }) %>
+                
+              <% } %>
+        <% } %>
+            
+        <label class="list-group-item d-flex gap-2">
+          <form class="item" action="/add" method="post">
+            <input type="text" name="newTask" placeholder="Add New Item" aria-label="Add new task" required >
+            <button type="submit">+</button>
+          </form>            
+        </label>        
+       
+        </div>        
+      </div>
+   <%- include("partials/footer.ejs") %>
