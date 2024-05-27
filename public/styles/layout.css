@@ -25,6 +25,11 @@ footer {
     margin-top: 7.6rem;
 }
 
+.list-group-item {
+    font-weight: bolder;
+    font-size: 20px;
+}
+
 .bg-dark {
     --bs-bg-opacity: 1;
     /*background-color: rgba(var(--bs-dark-rgb),var(--bs-bg-opacity))!important;*/
@@ -50,6 +55,7 @@ input[type="text"] {
     border-left: none;
     border-bottom: 0.1rem solid grey;
     width: 14rem;
+    font-weight: bolder;
 }
 
 /* remove border when textbox receive mouse focus */
@@ -76,6 +82,7 @@ input[type="text"]:focus {
 */
 input[type=checkbox]:checked + label.strikethrough{ 
     text-decoration: line-through;
+    color: red;
 }
 
 .navbar-brand, .nav-link {
@@ -84,4 +91,8 @@ input[type=checkbox]:checked + label.strikethrough{
 
 .navbar {
     --bs-navbar-nav-link-padding-x: 1.5rem;
+}
+
+footer {
+    font-size: 20px;
 }
